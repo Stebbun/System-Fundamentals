@@ -1,0 +1,8 @@
+When reallocing a block to a larger size, your allocator should check if there is an
+adjacent free block in memory.
+
+If this is the case, coalesce the two blocks and split if possible.
+
+If there is no adjacent free block in memory, move the data to a new block and free the
+old block.
+
